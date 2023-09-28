@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "ritwickdey.liveserver",
+        "esbenp.prettier-vscode"
+    ]
+}

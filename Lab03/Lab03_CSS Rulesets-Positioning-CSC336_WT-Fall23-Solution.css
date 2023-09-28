@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* *************************
+NOTE: This lab uses  % and px units for 
+sizing (i.e., width: 80%), however in 
+upcoming labs, you will learn CSS units
+to make responsive UIs. For now, this
+lab relly only on units in 
+% (fluid unit) and px (fixed unit).
+ *************************** */
+
+html,
+body {
+  height: 150%;
+}
+nav ul li {
+  /*DO YOUR SELF*/
+  list-style-type: none;
+}
+
+header {
+  height: 50px;
+  /* height: 3%; */
+  /* height: 50%; */
+  background-color: cornflowerblue;
+}
+
+nav {
+  position: fixed;
+  background-color: tomato;
+  width: 100%;
+  height: 120px;
+  /* height: 50%; */
+  /* height: 16%; */
+
+  /*DYS: Bring forward*/
+  z-index: 1;
+}
+
+main {
+  /* [static] ==> 90% of height of its parent i.e., <body> height */
+  /* height: 90%; */
+  height: 90%;
+  background-color: aquamarine;
+}
+
+.imgSection {
+  /* position: relative; */
+
+  /* [static] ==> 100% and 26% of width and height of its parent i.e., <main> width and height respectively */
+  width: 100%;
+  /* height: 26%; */
+}
+
+img {
+  /* [static] ==> 100% and 30% of width and height of its parent i.e., <body> width and height respectively */
+  width: 100%;
+  /* height: 100%; */
+  /* margin: 0 auto; */
+}
+
+.orderSection {
+  position: sticky;
+
+  /* sticky ==> top displacement from initial container block, ICB (i.e. viewport) */
+  top: 200px;
+  /* top: 25%; */
+
+  margin: 0 20px;
+  /* 
+    width: 90%;
+    margin: 0 auto;
+    background-color: brown;
+    */
+}
+
+footer {
+  position: fixed;
+
+  /* fixed ==> 100% and 3% of the width and height of initial container block, ICB (i.e. viewport)*/
+  width: 100%;
+  height: 25px;
+  /* height: 3%; */
+
+  /* fixed ==> Displacements from initial container block, ICB (i.e. viewport) */
+  bottom: 0;
+  left: 0;
+
+  background-color: cornflowerblue;
+}

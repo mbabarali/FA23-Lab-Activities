@@ -1,0 +1,91 @@
+<!-- placeOrder.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratory 03</title>
+    <link
+      rel="stylesheet"
+      href="./Lab03_CSS Rulesets-Positioning-CSC336_WT-Fall23-Solution.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>The Famous Restaurant</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./menus.html"> Menus </a></li>
+        <li><a href="./deals.html"> Deals </a></li>
+        <li><a href="./placeOrder.html"> Place order </a></li>
+        <li><a href="./about.html"> About </a></li>
+        <li><a href="./contactus.html"> Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="imgSection">
+        <!-- pexels-shameel-mukkath-14731625.jpg -->
+        <img
+          src="./Lab03_CSS Rulesets-Positioning-CSC336_WT-Fall23-Solution.jpg"
+          alt="image-tomato"
+          width="400px"
+        />
+      </section>
+
+      <section class="orderSection">
+        <h2>Place Order</h2>
+        <form action="/submit">
+          <label for="dish">Dish: </label>
+          <select id="dish" name="dish">
+            <option>Chicken Biryani</option>
+            <option>Mutton Karahi</option>
+            <option>Chicken Ginger</option>
+          </select>
+          <br />
+          <label for="servings">Number of servings: </label
+          ><input id="servings" name="servings" type="number" /> <br />
+          <br />
+          <br />
+          <label for="name1">First Name: </label
+          ><input type="text" id="name1" name="firstname" /><br />
+          <label for="name2">Last Name: </label
+          ><input type="text" id="name2" name="lastname" /> <br />
+
+          <br />
+          <label for="date">Delivery Date and Time: </label
+          ><input id="date" name="time" type="datetime-local" />
+
+          <br /><br />
+          <label for="instructions">Additional Instructions: </label><br />
+          <textarea
+            cols="30"
+            rows="5"
+            id="instructions"
+            name="instructions"
+            placeholder="please add additional instructions on your order here ..."
+          ></textarea>
+
+          <br /><br />
+          <label for="subscribe"
+            >Are you interested to subscribe us for latest deals?
+          </label>
+          <input type="checkbox" id="subscribe" name="subscribe" />
+
+          <br />
+          <label for="orderplaced"
+            >Are you sure, you want to place the order?
+          </label>
+          <input type="checkbox" id="orderplaced" name="orderplaced" />
+
+          <br /><br />
+          <input type="submit" value="Place Order" />
+        </form>
+      </section>
+    </main>
+    <footer>Copyright 2023</footer>
+  </body>
+</html>

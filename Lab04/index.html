@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ------------------------------------------------- -->
+    <!-- Style Sheets -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- ------------------------------------------------- -->
+
+    <title>Laboratory 04</title>
+  </head>
+  <body>
+    <header
+      class="bg-warning m-auto d-flex justify-content-end"
+      style="font-size: 2rem; font-weight: bold"
+    >
+      <span>Your Shopping Cart</span>
+      <i class="bi bi-cart-check-fill mx-4"></i>
+    </header>
+    <main>
+      <section class="container bg-light m-auto">
+        <article class="row">
+          <div class="col-12 col-sm-7 my-4">
+            <h2 class="ms-0">Select delivery options</h2>
+            <div class="container-fluid">
+              <div class="row my-4">
+                <div class="col-12 col-md-5 d-flex flex-column">
+                  <img
+                    width="100%"
+                    src="images/TV_OLED.jpg"
+                    alt="Product Image"
+                  />
+                  <div class="m-auto w-25">
+                    <a href="#change">change</a>
+                  </div>
+                </div>
+                <div class="col-12 col-md m-0 p-0">
+                  <h4>OLED TV 195 cm (77 Inch) [Model Year 2022]</h4>
+                  <span>Condition:</span>
+                  <div>
+                    <button class="btn btn-outline-primary m-2 btn-sm active">
+                      Used
+                    </button>
+                    <button class="btn btn-outline-success mx-2 btn-sm">
+                      Brand-new
+                    </button>
+                  </div>
+
+                  <div class="my-1">
+                    Unit Price: <i class="bi bi-currency-euro"></i>2000/-
+                  </div>
+
+                  <label for="qty" class="mx-1 my-2"
+                    >Quantity:
+                    <select
+                      class="btn btn-secondary btn-sm"
+                      name="quantity"
+                      id="qty"
+                    >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3" selected>3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm my-4">
+            <h2 class="ms-0">Order Summary</h2>
+            <div class="container">
+              <div class="row p-0 m-0">
+                <div class="col-12 my-3 d-flex justify-content-center">
+                  <a href="#" role="button" class="btn btn-info"
+                    >Change delivery address</a
+                  >
+                </div>
+                <div class="col-12 d-flex flex-column d-md-block">
+                  <span>Items Cost:</span>
+                  <span><i class="bi bi-currency-euro"></i>6000</span>
+                </div>
+                <div class="col-12 d-flex flex-column d-md-block">
+                  <span>Delivery Insurance:</span>
+                  <span><i class="bi bi-currency-euro"></i>35</span>
+                </div>
+                <div
+                  class="col-12 d-flex flex-column d-md-block border-bottom border-info pb-3"
+                >
+                  <span>Delivery Charges:</span>
+                  <span>Free for members</span>
+                </div>
+                <span class="col-12 d-flex flex-column d-md-block fw-bold">
+                  <span>Total Purchase:</span>
+                  <span><i class="bi bi-currency-euro"></i>6035</span>
+                </span>
+                <div class="col-12">
+                  <span>VAT:</span>
+                  <span
+                    ><i class="bi bi-currency-euro"></i>1146
+                    <a href="#VAT">(included)</a></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="row bg-danger-subtle" style="height: 4px"></div>
+        <article class="row border-bottom border-danger">
+          <div class="col-12 col-sm-7 my-4">
+            <h2 class="ms-0">Confirm payment details</h2>
+            <div class="container my-4">
+              <h4>Enter bank details:</h4>
+              <form action="abc">
+                <div class="form-group row">
+                  <label class="ms-1 my-2 col-12 col-sm-5" for="bic"
+                    >BIC (Swift-Code):</label
+                  ><input class="col-12 col-sm-6 my-2" type="text" id="bic" />
+                  <label class="ms-1 col-12 col-sm-5 my-2" for="iban"
+                    >IBAN:</label
+                  ><input class="col-12 col-sm-6 my-2" type="text" id="iban" />
+                  <label class="ms-1 col-12 col-sm-5 my-2" for="accholder"
+                    >Account Holder's Name:</label
+                  >
+                  <input
+                    class="col-12 col-sm-6 my-2"
+                    type="text"
+                    id="accholder"
+                  />
+                </div>
+                <div class="form-group row my-5">
+                  <input
+                    class="w-auto ms-sm-4 col-12 col-sm-2"
+                    type="checkbox"
+                    id="savechk"
+                    checked
+                  />
+                  <label class="col-12 col-sm" for="savechk"
+                    >Save my bank details for future purchases?</label
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-5 my-4">
+            <h2>Choose payment method</h2>
+            <div class="container my-4">
+              <form action="xyz">
+                <div class="row d-flex flex-column justify-content-evenly">
+                  <label class="col my-1" for="cc"
+                    ><input
+                      class="col-2 my-1"
+                      name="paymentmethod"
+                      type="radio"
+                      id="cc"
+                    />
+                    <i class="bi bi-credit-card-2-front ms-2 me-1"></i>
+                    Credit Card</label
+                  >
+                  <label class="col my-1" for="pp"
+                    ><input
+                      class="col-2 my-1"
+                      name="paymentmethod"
+                      type="radio"
+                      id="pp"
+                    />
+                    <i class="bi bi-paypal ms-2 me-1"></i> PayPal
+                  </label>
+                  <label class="col my-1 fw-semibold" for="ba"
+                    ><input
+                      class="col-2 my-1"
+                      name="paymentmethod"
+                      type="radio"
+                      id="ba"
+                      checked
+                    />
+                    <i class="bi bi-bank ms-2 me-1"></i> Personal Bank Account
+                  </label>
+                  <label class="col my-1" for="bf"
+                    ><input
+                      class="col-2 my-1"
+                      name="paymentmethod"
+                      type="radio"
+                      id="bf"
+                    />
+                    <i class="bi bi-coin ms-2 me-1"></i> Bank Financing
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </article>
+        <div class="row bg-danger" style="height: 4px"></div>
+      </section>
+    </main>
+  </body>
+</html>
